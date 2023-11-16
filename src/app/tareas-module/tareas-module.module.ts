@@ -11,6 +11,7 @@ import { FormularioPageComponent } from './pages/formulario-page/formulario-page
 import { TareaCardComponent } from './components/tarea-card/tarea-card.component';
 import { TareaFormularioComponent } from './components/tarea-formulario/tarea-formulario.component';
 import { TareasLayoutComponent } from './layout/tareas-layout/tareas-layout.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { TareasLayoutComponent } from './layout/tareas-layout/tareas-layout.comp
   imports: [
     CommonModule,
     TareasModuleRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class TareasModuleModule { }

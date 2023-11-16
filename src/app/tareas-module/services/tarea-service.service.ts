@@ -18,6 +18,10 @@ private tareas: Tarea[]=[];
     }
 
    }
+   agregarTarea(tarea:Tarea){
+    this.tareas.push(tarea);
+    this.AlmacenarDatos();
+   }
 
    private AlmacenarDatos(){
     localStorage.setItem(this.tareasKey, JSON.stringify(this.tareas));

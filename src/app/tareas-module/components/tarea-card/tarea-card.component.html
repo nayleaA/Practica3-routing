@@ -24,12 +24,12 @@
           'text-success': tarea.status == tareaStatus.compleatdo,
           'text-danger': tarea.status == tareaStatus.retrasado
         }">
-        {{ tarea.status }}
+        &squarf;{{ tarea.status }}
       </p>
     </div>
 <!--Botones-->
     <div class="text-center"
-    *ngIf="index>0">
+    *ngIf="index>=0 && tarea.status != 'Completado'">
       <button
         class="btn btn-small btn-outline-danger m-1"
         (click)="changeStatus(tareaStatus.retrasado)"
@@ -39,7 +39,6 @@
       <button
         class="btn btn-small btn-outline-success"
         (click)="changeStatus(tareaStatus.compleatdo)"
-        *ngIf="tarea.status != 'Completado'"
       >C
       </button>
     </div>
