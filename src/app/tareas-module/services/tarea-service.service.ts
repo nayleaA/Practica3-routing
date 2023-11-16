@@ -19,7 +19,16 @@ private tareas: Tarea[]=[];
 
    }
 
+   private AlmacenarDatos(){
+    localStorage.setItem(this.tareasKey, JSON.stringify(this.tareas));
+   }
+
    getTareas(): Tarea[]{
     return this.tareas;
+  }
+
+  updateTarea(index:number, tarea:Tarea){
+    this.tareas[index]=tarea;
+    this.AlmacenarDatos();
   }
 }

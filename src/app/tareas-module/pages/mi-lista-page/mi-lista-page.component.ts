@@ -17,6 +17,13 @@ export class MiListaPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+   this.obtenertareas();
+  }
+  obtenertareas(){
     this.tareas=this.tareaService.getTareas();
+  }
+
+  catchOnStatusChange(){
+  this.obtenertareas();
   }
 }
