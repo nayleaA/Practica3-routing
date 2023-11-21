@@ -1,0 +1,12 @@
+<h3>Por Continente</h3>
+<hr>
+<div class="text-center">
+    <button 
+    *ngFor="let continente of botonesContinente"
+    class="btn btn-outline-primary"
+    [ngClass]="{'active': continenteSeleccionado == continente}"
+    (click)="changeContinenteSeleccionado(continente)"
+    >
+    {{continente}}
+    </button>
+</div>

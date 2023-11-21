@@ -8,6 +8,10 @@ const routes: Routes = [
       loadChildren: ()=> import('./tareas-module/tareas-module.module').then((m)=>m.TareasModuleModule)
    },
    {
+    path:"paises",
+    loadChildren: ()=> import('./paises/paises.module').then((m)=>m.PaisesModule)
+  },
+   {
      path:'**', //si no esta declarado redirecciona
      redirectTo:'tareas-module'
    }
