@@ -28,6 +28,7 @@ export class PorContinenteComponent {
   }
 
   requestCountries(){
+    
     this.paisesService.getCountriesByRegion(this.continenteSeleccionado)
     .subscribe(
       (countries)=>{
