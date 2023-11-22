@@ -9,7 +9,6 @@ import { PaisCardComponent } from './components/pais-card/pais-card.component';
 import { PaisesLayoutComponent } from './layout/paises-layout/paises-layout.component';
 import { SharedModule } from '../shared/shared.module';
 
-
 @NgModule({
   declarations: [
     PorContinenteComponent,

@@ -20,11 +20,21 @@ export class PorContinenteComponent {
     return;}
     this.continenteSeleccionado=continente;
     //solicitar datos a restCountries
-
+    this.requestCountries();
   }
 
   clearPaises(){
     this.paises=[];
+  }
+
+  requestCountries(){
+    this.paisesService.getCountriesByRegion(this.continenteSeleccionado)
+    .subscribe(
+      (countries)=>{
+        console.log(countries);
+      this.paises=countries;
+      }
+    );
   }
 
   //del models que no hice
