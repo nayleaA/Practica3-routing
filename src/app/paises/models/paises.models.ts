@@ -12,7 +12,7 @@ export interface Country {
     idd:          Idd;
     capital:      string[];
     altSpellings: string[];
-    region:       Region;
+    region?:       Region;
     subregion:    Subregion;
     languages:    Languages;
     translations: { [key: string]: Translation };

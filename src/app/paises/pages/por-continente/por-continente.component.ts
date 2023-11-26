@@ -11,9 +11,17 @@ export class PorContinenteComponent {
   paisesService:PaisesService=inject(PaisesService);
   //arreglo
   botonesContinente:string[]=Object.keys(Continente);
+
+  continenteValues: string[]=Object.values(Continente);
+
   continenteSeleccionado:string='';
 
-  changeContinenteSeleccionado(continente:string){
+   //del models que no hice
+   paises:SmallCountry[]=[];
+
+  changeContinenteSeleccionado(index:number){
+    const continente=this.continenteValues[index];
+
     if(this.continenteSeleccionado == continente){
     this.continenteSeleccionado='';
     this.clearPaises();
@@ -37,8 +45,5 @@ export class PorContinenteComponent {
       }
     );
   }
-
-  //del models que no hice
-  paises:SmallCountry[]=[];
-  
+ 
 }

@@ -8,6 +8,7 @@ import { VerPaisComponent } from './pages/ver-pais/ver-pais.component';
 import { PaisCardComponent } from './components/pais-card/pais-card.component';
 import { PaisesLayoutComponent } from './layout/paises-layout/paises-layout.component';
 import { SharedModule } from '../shared/shared.module';
+import { VerpaiscardComponent } from './components/verpaiscard/verpaiscard.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SharedModule } from '../shared/shared.module';
     VerPaisComponent,
     PaisCardComponent,
     PaisesLayoutComponent,
+    VerpaiscardComponent,
   ],
   imports: [
     CommonModule,

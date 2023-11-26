@@ -1,1 +1,25 @@
-<p>ver-pais works!</p>
+<section class="col">
+    <div class="col-12 text-center">
+        <h3 >Informacion del Pais</h3>
+        <hr>
+    </div>
+    <div  class="col-12 row">
+    </div>
+</section>
+<div id="paises-container" class="col-12 row justify-content-between">
+    <div class="row">
+        <verpaiscard
+        *ngIf="paises"
+        [verpais]="paises"
+        ></verpaiscard>
+   </div>
+</div>
+<section>
+    <ng-template #NoPaises>
+        <div class="bg-danger">
+            <h4 class="text-center text-white">
+                    No se recibio un país
+            </h4>
+        </div>
+    </ng-template>
+</section>

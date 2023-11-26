@@ -1,0 +1,63 @@
+<div *ngIf="verpais;else NoCountry">
+    <h3 class="text-center">País Seleccionado: {{verpais.name.common}}</h3>
+    <div class="card border-primary p-1">
+        <img 
+        class="card-img-top"
+        src="{{verpais.flags.svg}}" 
+        alt="{{verpais.flags.alt}}">
+        <div class="card p-1 mt-2 border-secondary">
+            <h3 class="text-center">{{verpais.flag}} {{verpais.name.common}}</h3>
+            <hr>
+            <div class="d-flex justify-content-between">
+              <div><strong>Official:</strong></div>
+              <div class="text-end">{{verpais.name.official}}</div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <div><strong>Native:</strong></div>
+              <div class="text-end">{{nativeName}}</div>
+            </div>
+        </div>
+        <div class="card p-1 mt-2 boder-secondary">
+            <div class="d-flex justify-content-between">
+                <div><strong>Capital:</strong></div>
+                <div class="text-end">{{verpais.capital[0]}}</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div><strong>Population:</strong></div>
+                <div class="text-end">{{verpais.population}}</div>
+              </div>
+          </div>
+          <div class="card p-1 mt-2 boder-secondary">
+            <div class="d-flex justify-content-between">
+                <div><strong>Continente:</strong></div>
+                <div class="text-end">{{verpais.continents[0]}}</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div><strong>Lat,Long:</strong></div>
+                <div class="text-end">{{verpais.latlng}}</div>
+              </div>
+          </div>
+          <div class="card p-1 mt-2 boder-secondary">
+            <div class="d-flex justify-content-between">
+                <div><strong>TimeZones:</strong></div>
+                <div class="text-end">{{verpais.timezones[0]}}</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div><strong>Idioma:</strong></div>
+                <div class="text-end">{{this.verpais.languages.eng}}</div>
+              </div>
+          </div>
+          
+        <div class="card-footer text-center">
+            <a routerLink="/paises/por-continente"
+            class="btn btn-primary">Volver</a>
+        </div>
+    </div>
+</div>
+<ng-template #NoCountry>
+    <div class="bg-danger">
+        <h4 class="text-center text-white">
+            No se recibio un país
+        </h4>
+    </div>
+</ng-template>

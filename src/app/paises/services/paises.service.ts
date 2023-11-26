@@ -8,6 +8,9 @@ import { Country, SmallCountry } from '../models/paises.models';
   providedIn: 'root'
 })
 export class PaisesService {
+  static getCountryByCca3(cca3: any): any {
+    throw new Error('Method not implemented.');
+  }
   private baseurl:string='https://restcountries.com/v3.1';
 
   //para peticiones
@@ -29,14 +32,11 @@ export class PaisesService {
     );
   }
 
-  getCountryByCca3(cca3:string):Observable<Country>{
+  getCountryByCca3(cca3:string): Observable <Country>{
     const url=`${this.baseurl}/alpha/${cca3}`;
-
-    return this.http.get<Country[]>(url)
-    .pipe(
+    return this.http.get<Country[]>(url).pipe(
       map((countries)=>countries[0]),catchError(error=> of())
     );
-
   }
 
 }
