@@ -18,7 +18,9 @@ ngOnInit():void{
   //usar el servicio para traer datos del pais
   this.activatedRoute.params.pipe(
     //switchMap(({cca3})=>of(cca3))
+    //conversion de observables, con objetos que tiene un observable y transformarlo en otro observable.
     switchMap(({cca3})=>this.paisesService.getCountryByCca3(cca3))
+    //,switchMap(({country})=>this.paisesService.getCountryByName(country.name.official))
   ).subscribe(
     (pais)=>{
       //Guardar para despues utilizar la info del pais
