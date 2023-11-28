@@ -12,6 +12,12 @@ export class PorPaisComponent {
 
 onEnterPressed(valor:string){
  // console.log('holis', valor);
+ valor=valor.trim();
+
+ if(valor.length==0){
+  alert("El valor que se introdujo esta vacio o son espacios");
+  return;
+ }
   this.buscarPaisesPorNombre(valor);
 }
 
