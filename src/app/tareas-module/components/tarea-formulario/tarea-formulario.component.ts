@@ -48,8 +48,8 @@ export class TareaFormularioComponent {
     console.log('Valores ingresador', this.tareaForm.value)
 
     //redirigir a mi lista
-    this.router.navigate(['tareas',"mi-lista"]);
-    //this.router.navigate(['/tareas/mi-lista']);
+    this.router.navigate(['tareas-module',"mi-lista"]);
+   // this.router.navigate(['/tareas/mi-lista']);
   }
 
 }
